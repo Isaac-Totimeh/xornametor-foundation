@@ -5,7 +5,7 @@
                 <script>
                     document.write(new Date().getFullYear())
                 </script> © GAF| All Rights Reserved <i class="mdi mdi-heart text-danger"></i>
-                | Powered by (GHQ-DIT).
+                | Powered by (XtrayCompany.Limited).
             </div>
 
         </div>

@@ -5,13 +5,13 @@
     <div class="navbar-brand-box">
         <a href="index.html" class="logo logo-light">
             <span class="logo-sm">
-                <img src="{{ asset('assets/images/logoncds.jpeg') }}" alt="" height="22">
+                {{-- <img src="{{ asset('assets/images/logoncds.jpeg') }}" alt="" height="22"> --}}
             </span>
             <span class="logo-lg">
-                <h3 style="color: #fff; padding-top:20px;">GMPC CHURCH</h3>
+                <h3 style="color: #fff; padding-top:20px;">Xornametor Foundation</h3>
             </span>
         </a>
-        <button type="button" class="btn btn-sm p-0 fs-20 header-item float-end btn-vertical-sm-hover"
+        <button type="button" class="p-0 btn btn-sm fs-20 header-item float-end btn-vertical-sm-hover"
             id="vertical-hover">
             <i class="ri-record-circle-line"></i>
         </button>

@@ -27,7 +27,7 @@
 
 <body>
 
-    <div class="auth-page-wrapper pt-5">
+    <div class="pt-5 auth-page-wrapper">
         <!-- auth page bg -->
         <div class="auth-one-bg-position auth-one-bg" id="auth-particles">
             <div class="bg-overlay"></div>
@@ -45,14 +45,14 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
-                        <div class="text-center mt-sm-5 mb-4 text-white-50">
-                            <div>
+                        <div class="mb-4 text-center mt-sm-5 text-white-50">
+                            {{-- <div>
                                 <a href="index.html" class="d-inline-block auth-logo">
                                     <img src="{{ asset('frontend/assets/img/GMPC LOGO.png') }}" alt=""
                                         height="80">
                                 </a>
-                            </div>
-                            <p class="mt-3 fs-15 fw-medium">THE GARRISON PRESBYTERIAN CHURCH</p>
+                            </div> --}}
+                            <p class="mt-3 fs-15 fw-medium">XORNAMETOR FOUNDATION</p>
                         </div>
                     </div>
                 </div>
@@ -60,11 +60,11 @@
 
                 <div class="row justify-content-center">
                     <div class="col-md-8 col-lg-6 col-xl-5">
-                        <div class="card mt-4">
-                            <div class="card-body p-4">
-                                <div class="text-center mt-2">
+                        <div class="mt-4 card">
+                            <div class="p-4 card-body">
+                                <div class="mt-2 text-center">
                                     <h5 class="text-primary">Welcome !</h5>
-                                    <p class="text-muted">Sign in to continue to NCDS.</p>
+                                    <p class="text-muted">Sign in to continue to Xornametor Foundation Admin.</p>
                                 </div>
                                 <div class="p-2 mt-4">
                                     <form action="{{ route('log-in') }}" method="POST">
@@ -83,16 +83,16 @@
                                                     password?</a>
                                             </div>
                                             <label class="form-label" for="password-input">Password</label>
-                                            <div class="position-relative auth-pass-inputgroup mb-3">
+                                            <div class="mb-3 position-relative auth-pass-inputgroup">
                                                 <input type="password" class="form-control pe-5 password-input"
                                                     name="password" placeholder="Enter password" id="password-input">
                                                 @error('password')
                                                     <span class="badge bg-warning">{{ $message }}</span>
                                                 @enderror
                                                 <button
-                                                    class="btn btn-link position-absolute end-0 top-0 text-decoration-none text-muted password-addon"
+                                                    class="top-0 btn btn-link position-absolute end-0 text-decoration-none text-muted password-addon"
                                                     type="button" id="password-addon"><i
-                                                        class="ri-eye-fill align-middle"></i></button>
+                                                        class="align-middle ri-eye-fill"></i></button>
                                             </div>
                                         </div>
                                         <div class="mt-4">
@@ -120,7 +120,7 @@
                                 <script>
                                     document.write(new Date().getFullYear())
                                 </script> | All Rights Reserved <i class="mdi mdi-heart text-danger"></i>
-                                | Powered by (GHQ)
+                                | Powered by (XRAYCOMPANY.LIMITED)
                             </p>
                         </div>
                     </div>

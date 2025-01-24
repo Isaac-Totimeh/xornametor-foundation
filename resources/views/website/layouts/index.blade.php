@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Xornametir-Foundation</title>
+    <title>Xornametor-Foundation</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -60,9 +60,6 @@
                   <li><a href="#contact-section" class="nav-link">Contact</a></li>
                 </ul>
               </nav>
-          
-            
-
           <div class="toggle-button d-inline-block d-lg-none"><a href="#" class="py-5 text-black site-menu-toggle js-menu-toggle"><span class="icon-menu h3"></span></a></div>
 
         </div>
