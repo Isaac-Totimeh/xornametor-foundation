@@ -29,7 +29,7 @@ Route::get('/', function () {
     $participant = Participant::all();
     $banner = Banner::latest()->take(5)->get();
     $community = Community::get();
-    return view('website.layouts.gmpc.index', compact('staffs', 'participant', 'banner', 'community'));
+    return view('website.layouts.index', compact('staffs', 'participant', 'banner', 'community'));
 });
 
 Route::get('/email/verify', function () {
