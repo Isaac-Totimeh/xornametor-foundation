@@ -28,6 +28,11 @@
     <link rel="stylesheet" href="{{ asset('assets/libs/gridjs/theme/mermaid.min.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/select2/css/select2.min.css') }}">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css">
+<!-- include libraries(jQuery, bootstrap) For Summer Editor  -->
+   
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
     <style>
         /* CSS for active state */
@@ -93,7 +98,18 @@
     <!-- App js -->
     <script src="{{ asset('assets/js/app.js') }}"></script>
     <script src="{{ asset('assets/select2/js/select2.min.js') }}"></script>
+  <!-- summernote css/js -->
+<!-- summernote css/js -->
+<link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.js"></script>
+<script>
+  $(document).ready(function() {
+    $('#summernote').summernote({
+        height: 300 // Adjust the height as needed (e.g., 300px)
+    });
+});
 
+  </script>
     <script>
         @if (Session::has('message'))
             var type = "{{ Session::get('alert-type', 'info') }}"

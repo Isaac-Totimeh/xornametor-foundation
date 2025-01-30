@@ -87,10 +87,7 @@
                                         <a href="{{ route('view-events') }}" class="nav-link"
                                             data-key="t-carousel">Events</a>
                                     </li>
-                                    <li class="nav-item">
-                                        <a href="{{ route('view-commandants') }}" class="nav-link"
-                                            data-key="t-dropdowns">Commandant</a>
-                                    </li>
+                                    
                                     <li class="nav-item">
                                         <a href="ui-grid.html" class="nav-link" data-key="t-grid">Joining
                                             Instructions</a>

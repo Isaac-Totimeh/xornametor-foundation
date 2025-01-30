@@ -23,6 +23,7 @@ use App\Models\Community;
 use App\Models\Participant;
 use App\Models\Staff;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProjectsController;
 
 Route::get('/', function () {
     $staffs = Staff::all();
@@ -43,17 +44,23 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 //     return view('backend.layouts.index');
 // })->middleware(['auth:sanctum'])->name('dashboard');
 
-Route::get('/courses', function () {
-    return view('website.layouts.courses');
-})->name('Courses');
+Route::get('/about-us', function () {
+    return view('website.layouts.about');
+})->name('about');
+Route::get('/beneficiaries', function () {
+    return view('website.layouts.beneficiaries');
+})->name('beneficiaries');
 
-Route::get('/contact', function () {
-    return view('website.layouts.contact');
+Route::get('/contact-us', function () {
+    return view('website.layouts.contactus');
 })->name('contact');
 
-Route::get('/articles', function () {
-    return view('website.layouts.articles');
-})->name('articles');
+Route::get('/blogs', function () {
+    return view('website.layouts.blogs');
+})->name('blogs');
+Route::get('/donate', function () {
+    return view('website.layouts.donate');
+})->name('donate');
 
 Route::get('/article-details/{uuid}', function ($uuid) {
     $article_details = Article::where('uuid', $uuid)->firstOrFail();
@@ -65,9 +72,9 @@ Route::get('/article/{uuid}', function ($uuid) {
     return view('website.layouts.articles', compact('article'));
 })->name('article');
 
-Route::get('/matriculation', function () {
-    return view('website.layouts.matriculation');
-})->name('matriculation');
+Route::get('/our-projects', function () {
+    return view('website.layouts.project_done');
+})->name('project.done');
 
 Route::get('/join', function () {
     return view('website.layouts.join');
@@ -91,14 +98,6 @@ Route::get('/detail-staff', function () {
     return view('website.layouts.detail_staff', compact('staffs'));
 })->name('detail_staff');
 
-Route::prefix('about')->group(function () {
-    Route::get('/', [AboutController::class, 'index'])->name('about');
-
-});
-
-Route::prefix('commandant')->group(function () {
-    Route::get('/', [CommandantController::class, 'index'])->name('commandant');
-});
 
 Route::post('login', [LogsController::class, 'Log_in'])->name('log-in');
 Route::get('logout', [LogsController::class, 'Logout'])->name('logout')->middleware('auth');
@@ -200,11 +199,7 @@ Route::group(['prefix' => 'admin'], function () {
         Route::get('/delete/{uuid}', [BannerController::class, 'Delete'])->name('banner-delete');
     });
     Route::prefix('commandant')->group(function () {
-        Route::get('/', [CommandController::class, 'View'])->name('view-commandants');
-        Route::get('/mech', [CommandController::class, 'Add'])->name('commandants-add');
-        Route::post('/store', [CommandController::class, 'Store'])->name('commandants-store');
-        Route::get('/edit/{uuid}', [CommandController::class, 'Edit'])->name('commandants-edit');
-        Route::post('/update', [CommandController::class, 'Update'])->name('commandants-update');
-        Route::get('/delete/{uuid}', [CommandController::class, 'Delete'])->name('commandants-delete');
+        Route::post('/projects/store', [ProjectsController::class, 'store'])->name('project-store');
+        Route::post('/ckeditor/upload', [ProjectsController::class, 'uploadImage'])->name('ckeditor.upload');
     });
 });
